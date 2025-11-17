@@ -25,6 +25,7 @@ func main() {
 	//Start kafka consumer parallally, which ->Read message/order from kafka by kafka topic
 	// and then send to the WorkerQueue
 	go kafka.StartConsumer(workerQueue)
+
 	// Here Number of Worker is: 5, and workerqueue contain the job/order
 	//which need to done/processed
 	//all worker is individual go routine that work parallay
