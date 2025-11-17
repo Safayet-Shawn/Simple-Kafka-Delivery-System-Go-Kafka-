@@ -26,8 +26,7 @@ func main() {
 	// and then send to the WorkerQueue
 	go kafka.StartConsumer(workerQueue)
 	// Here Number of Worker is: 5, and workerqueue contain the job/order
-	//which need to done/processed
-	//all worker is individual go routine that work parallay
+	//which need to done/processed ,all worker is individual go routine that work parallay
 	worker.StartWorker(5, workerQueue)
 	select {}
 }
